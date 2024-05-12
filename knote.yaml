@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: knote
-          image: ventana1901/knote:2
+          image: ventana1901/knote:3
           ports:
             - containerPort: 3000
           env:
