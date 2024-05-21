@@ -1,0 +1,18 @@
+namespace: parcial3
+knote:
+  image:
+    repository: ventana1901/knote
+    tag: latest
+  service:
+    type: LoadBalancer
+    port: 80
+    targetPort: 3000
+  mongoUrl: mongodb://mongo:27017/dev
+mongo:
+  image:
+    repository: mongo
+    tag: 6.0.2-focal
+  pvc:
+    accessModes:
+      - ReadWriteOnce
+    storage: 256Mi

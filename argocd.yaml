@@ -2,13 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: knote
-  namespace: parcial3
-spec: 
-  source: 
-    path: ./
-    repoURL: https://github.com/DanielRamirez1901/CD-Jenkins-Kubernetes.git
+  namespace: argocd
+spec:
+  source:
+    repoURL: 'https://github.com/DanielRamirez1901/CD-Jenkins-Kubernetes.git'
     targetRevision: HEAD
+    path: helm-project
+    helm:
+      valueFiles:
+      - values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: kube-system
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
