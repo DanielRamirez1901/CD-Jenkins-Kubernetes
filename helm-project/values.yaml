@@ -2,7 +2,7 @@ namespace: parcial3
 knote:
   image:
     repository: ventana1901/knote
-    tag: 4
+    tag: 5
   service:
     type: LoadBalancer
     port: 80
@@ -11,7 +11,7 @@ knote:
 mongo:
   image:
     repository: mongo
-    tag: 4
+    tag: 5
   pvc:
     accessModes:
       - ReadWriteOnce
