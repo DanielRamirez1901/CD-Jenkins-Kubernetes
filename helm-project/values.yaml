@@ -2,7 +2,7 @@ namespace: parcial3
 knote:
   image:
     repository: ventana1901/knote
-    tag: 1
+    tag: 3
   service:
     type: LoadBalancer
     port: 80
@@ -11,7 +11,7 @@ knote:
 mongo:
   image:
     repository: mongo
-    tag: 6.0.2-focal  # Especificar claramente la versión de MongoDB
+    tag: 3
   pvc:
     accessModes:
       - ReadWriteOnce
