@@ -81,7 +81,7 @@ spec:
     spec:
       containers:
         - name: mongo
-          image: {{ .Values.mongo.image.repository}}:{{ .Values.mongo.image.tag }}
+          image: mongo:6.0.2-focal
           ports:
             - containerPort: 27017
           volumeMounts:

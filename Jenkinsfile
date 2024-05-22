@@ -15,8 +15,8 @@ node {
                     // Path to the values.yaml in the Helm chart directory
                     def valuesYamlPath = 'helm-project/values.yaml'
                     
-                    // Update the image tag for ventana1901/knote in the values.yaml file
-                    sh "sed -i 's+\(repository: ventana1901/knote\).*+\1\n    tag: ${DOCKERTAG}+g' ${valuesYamlPath}"
+                    // Update the image tag in the values.yaml file
+                    sh "sed -i 's+tag:.*+tag: ${DOCKERTAG}+g' ${valuesYamlPath}"
                     
                     // Display the updated file for verification
                     sh "cat ${valuesYamlPath}"
