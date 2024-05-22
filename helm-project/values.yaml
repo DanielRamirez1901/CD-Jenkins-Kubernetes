@@ -11,7 +11,7 @@ knote:
 mongo:
   image:
     repository: mongo
-    tag: 1
+    tag: 6.0.2-focal  # Especificar claramente la versión de MongoDB
   pvc:
     accessModes:
       - ReadWriteOnce
